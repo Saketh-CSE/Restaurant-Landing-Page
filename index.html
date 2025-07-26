@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteXL Restaurant - New Flavours</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ByteXL</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT US</a></li>
+                <li><a href="#menu" class="nav-link">MENU</a></li>
+                <li><a href="#gallery" class="nav-link">GALLERY</a></li>
+                <li><a href="#reservation" class="nav-link">RESERVATION</a></li>
+                <li><a href="#location" class="nav-link">LOCATION</a></li>
+                <li><a href="#blog" class="nav-link">BLOG</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome To<br><span class="highlight">ByteXL New Flavours</span></h1>
+            <p class="hero-subtitle">Experience culinary excellence with our chef's special creations</p>
+            <button class="cta-button" onclick="scrollToSection('reservation')">Book a Table</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Our Restaurant</h2>
+                <p>Discover the story behind our passion for exceptional cuisine</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>A Culinary Journey</h3>
+                    <p>At ByteXL, we believe that great food brings people together. Our restaurant combines traditional recipes with modern culinary techniques to create an unforgettable dining experience.</p>
+                    <p>With over 15 years of experience, our head chef crafts each dish with precision and passion, using only the finest local ingredients.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>Gourmet Cuisine</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <span>Fresh Ingredients</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <span>Award Winning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chef cooking">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Explore our carefully curated selection of dishes</p>
+            </div>
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All Items</button>
+                <button class="filter-btn" data-filter="vegetarian">Vegetarian</button>
+                <button class="filter-btn" data-filter="non-vegetarian">Non-Vegetarian</button>
+                <button class="filter-btn" data-filter="special">Chef's Special</button>
+            </div>
+            <div class="menu-grid" id="menu-items">
+                <!-- Menu items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Take a glimpse into our restaurant's ambiance and culinary artistry</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Interior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Delicious Food">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Chef at Work">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1395964/pexels-photo-1395964.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Fine Dining">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Food Preparation">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Restaurant Atmosphere">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Make a Reservation</h2>
+                <p>Book your table for an exceptional dining experience</p>
+            </div>
+            <form class="reservation-form" id="reservationForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select Time</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="18:30">6:30 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="19:30">7:30 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="20:30">8:30 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Guests</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5 People</option>
+                            <option value="6">6+ People</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Special Requests</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any special dietary requirements or occasions?"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Reserve Table</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <p>Visit us at our convenient location</p>
+            </div>
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Culinary Street, Food District<br>Gourmet City, GC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Monday - Friday: 11:00 AM - 10:00 PM<br>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Contact</h4>
+                            <p>Phone: (555) 123-4567<br>Email: info@bytexl.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Interactive Map</p>
+                        <small>Click to view in Google Maps</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest News & Updates</h2>
+                <p>Stay updated with our latest culinary adventures</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Blog Post">
+                    <div class="blog-content">
+                        <span class="blog-date">March 15, 2024</span>
+                        <h3>New Spring Menu Launch</h3>
+                        <p>Discover our exciting new spring menu featuring fresh seasonal ingredients and innovative dishes.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Blog Post">
+                    <div class="blog-content">
+                        <span class="blog-date">March 10, 2024</span>
+                        <h3>Wine Pairing Event</h3>
+                        <p>Join us for an exclusive wine pairing dinner featuring selections from renowned vineyards.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+                <article class="blog-post">
+                    <img src="https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Blog Post">
+                    <div class="blog-content">
+                        <span class="blog-date">March 5, 2024</span>
+                        <h3>Chef's Culinary Awards</h3>
+                        <p>We're proud to announce our head chef's recognition at the National Culinary Awards.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ByteXL Restaurant</h3>
+                    <p>Experience culinary excellence with every bite. Join us for an unforgettable dining journey.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#reservation">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Culinary Street, Food District</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@bytexl.com</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours">
+                        <span>Monday - Friday</span>
+                        <span>11:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="hours">
+                        <span>Saturday - Sunday</span>
+                        <span>10:00 AM - 11:00 PM</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ByteXL Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Reservation Confirmed!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for your reservation. We've sent a confirmation email with all the details.</p>
+                <p>We look forward to serving you an exceptional dining experience!</p>
+            </div>
+            <button class="modal-button" onclick="closeModal()">Close</button>
+            <button class="modal-button" onclick="closeConfirmationModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
